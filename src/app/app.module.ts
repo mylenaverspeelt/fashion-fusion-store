@@ -15,8 +15,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
-import {  MatTableModule } from '@angular/material/table';
-
+import { MatTableModule } from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -37,8 +37,8 @@ import {  MatTableModule } from '@angular/material/table';
     MatToolbarModule,
     MatTableModule,
     MatBadgeModule,
-    MatSnackBarModule
-
+    MatSnackBarModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
