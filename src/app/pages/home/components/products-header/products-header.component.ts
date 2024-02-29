@@ -8,7 +8,7 @@ export class ProductsHeaderComponent implements OnInit {
 
   @Output() columnsCountChange = new EventEmitter<number>();
 
-  sort = 'desc'
+  sort = 'Maior Preço'
   itemsShowCount = 12
 
   constructor() { }
