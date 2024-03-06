@@ -1,4 +1,4 @@
-<mat-card class="max-w-7xl mx-auto" *ngIf="cart.items.length">
+<mat-card class="max-w-7xl mx-auto" *ngIf="cart.itemsArray.length">
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-full">
 
         <ng-container matColumnDef="product">
@@ -76,7 +76,7 @@
 
             <td mat-footer-cell *matFooterCellDef>
                 <span class="font-bold py-5 block">
-                    {{getTotal(cart.items) | currency: 'BRL' }}
+                    {{getTotal(cart.itemsArray) | currency: 'BRL' }}
                 </span>
             </td>
         </ng-container>
@@ -110,7 +110,7 @@
 
 </mat-card>
 
-<mat-card *ngIf="!cart.items.length">
+<mat-card *ngIf="!cart.itemsArray.length">
     <p>Seu carrinho está vazio.</p>
     <button mat-raised-button routerLink="/home">Comprar agora</button>
 
