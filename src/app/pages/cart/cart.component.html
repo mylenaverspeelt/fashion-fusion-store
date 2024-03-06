@@ -3,7 +3,7 @@
 
         <ng-container matColumnDef="product">
             <th mat-header-cell *matHeaderCellDef>
-                Product
+                Produto
             </th>
             <td mat-cell *matCellDef="let element">
                 <img src="{{element.product}}" alt="product" class="w-[100px] my-5">
@@ -47,13 +47,13 @@
                 Quantidade
             </th>
             <td mat-cell *matCellDef="let element">
-                <button mat-icon-button>
+                <button (click)="onRemoveQuatity(element)" mat-icon-button>
                     <mat-icon>
                         remove
                     </mat-icon>
                 </button>
                 <span>{{element.quantity}}</span>
-                <button mat-icon-button>
+                <button (click)="onAddQuantity(element)" mat-icon-button>
                     <mat-icon>
                         add
                     </mat-icon>
@@ -84,12 +84,12 @@
 
         <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef>
-                <button mat-raised-button color="warn" class="float-right">
+                <button (click)="onClearCart()" mat-raised-button color="warn" class="float-right">
                     Limpar carrinho
                 </button>
             </th>
             <td mat-cell *matCellDef="let element">
-                <button mat-mini-fab color="warn" class="float-right"><mat-icon>close</mat-icon></button>
+                <button (click)="onRemoveItemFromCart(element)" mat-mini-fab color="warn" class="float-right"><mat-icon>close</mat-icon></button>
             </td>
 
             <td mat-footer-cell *matFooterCellDef>
