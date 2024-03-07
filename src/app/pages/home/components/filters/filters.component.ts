@@ -18,9 +18,20 @@ export class FiltersComponent implements OnInit {
 
   ngOnInit(): void {
     let categoriesSubscription = this.storeService.getAllCategories().subscribe((response) => {
-      this.categories = response
+      this.categories = response.map((category: string) => this.translateCategory(category));
     })
   }
+
+  translateCategory(category: string): string {
+    return this.categoryTranslations[category] || category;
+  }
+
+  categoryTranslations: { [key: string]: string } = {
+    "men's clothing": 'Roupas Masculinas',
+    "women's clothing": 'Roupas Femininas',
+    'electronics': 'Eletrônicos',
+    'jewelery': 'Joias',
+  };
 
   onShowCategory(category: string): void {
     this.showCategory.emit(category)
