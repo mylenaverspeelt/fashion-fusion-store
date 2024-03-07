@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "fashion-fusion-store": {
+    "mix-store": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -40,7 +40,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/fashion-fusion-store",
+            "outputPath": "dist/mix-store",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -92,10 +92,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "fashion-fusion-store:build:production"
+              "browserTarget": "mix-store:build:production"
             },
             "development": {
-              "browserTarget": "fashion-fusion-store:build:development"
+              "browserTarget": "mix-store:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -103,7 +103,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "fashion-fusion-store:build"
+            "browserTarget": "mix-store:build"
           }
         }
       }

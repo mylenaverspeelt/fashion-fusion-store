@@ -11,7 +11,7 @@ import { CartService } from './services/cart.service';
   styles: []
 })
 export class AppComponent implements OnInit {
-  title = 'fashion-fusion-store';
+  title = 'mix-store';
   cart: Cart = {itemsArray: []}
 
   constructor(private cartService: CartService){}
