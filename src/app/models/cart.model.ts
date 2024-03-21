@@ -1,9 +1,8 @@
-export interface Cart{
+export interface Cart {
     itemsArray: Array<CartItem>
 }
 
-
-export interface CartItem{
+export interface CartItem {
     product: string;
     name: string;
     price: number;

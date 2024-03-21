@@ -23,5 +23,4 @@ export class StoreService {
       `${STORE_BASE_URL}/products/categories`
       )
   }
-
 }

@@ -12,7 +12,7 @@ const routes: Routes = [{
   component: CartComponent
 },
 {
-  path: '', redirectTo: 'home', pathMatch:'full'
+  path: '', redirectTo: 'home', pathMatch: 'full'
 }];
 
 @NgModule({

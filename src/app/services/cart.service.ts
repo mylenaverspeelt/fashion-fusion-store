@@ -18,22 +18,13 @@ export class CartService {
   addToCart(item: CartItem): void {
     const itemsArray = [...this.cart.value.itemsArray]
 
-    // const itemInCart = itemsArray.find((_item) => item.id === item.id)
-
     const itemInCartIndex = itemsArray.findIndex((_item) => _item.id === item.id);
-
 
     if (itemInCartIndex !== -1) {
       itemsArray[itemInCartIndex].quantity += 1;
     } else {
       itemsArray.push(item);
     }
-
-    // if (itemInCart) {
-    //   itemInCart.quantity += 1
-    // } else {
-    //   itemsArray.push(item)
-    // }
 
     this.cart.next({ itemsArray })
     this._snackBar.open('1 item adicionado ao carrinho', 'Ok', { duration: 3000 })
@@ -47,7 +38,6 @@ export class CartService {
     this.cart.next({ itemsArray: [] })
     this._snackBar.open('O carrinho está vazio', 'Ok', { duration: 3000 })
   }
-
 
   removeItemFromCart(element: CartItem, update = true): Array<CartItem> {
     const filteredItems = this.cart.value.itemsArray.filter((_item) => _item.id !== element.id)
@@ -80,8 +70,5 @@ export class CartService {
     this.cart.next({ itemsArray: filteredItems })
 
     this._snackBar.open('1 item removido do carrinho', 'Ok', { duration: 3000 })
-
-
   }
-
 }

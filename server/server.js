@@ -40,4 +40,4 @@ app.post("/checkout", async (req, res, next) => {
 }
 )
 
-app.listen(4242, () => console.log('app is runing on 4242'))
+app.listen(4242, () => console.log('server is runing on 4242'))

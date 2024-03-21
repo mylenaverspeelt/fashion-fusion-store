@@ -32,11 +32,9 @@ export class HomeComponent implements OnInit {
     });
   }
   
-
   onColumnsCountChange(colsNum: number): void {
     this.cols = colsNum
     this.rowHeight = ROWS_HEIGHT[this.cols]
-
   }
 
   onShowCategory(newCategory: string): void {
@@ -58,7 +56,6 @@ export class HomeComponent implements OnInit {
     this.count = newCount.toString()
     this.getProducts()
   }
-
 
   onSortChange(newSort: string): void {
     this.sort = newSort

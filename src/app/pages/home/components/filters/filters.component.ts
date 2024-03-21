@@ -2,7 +2,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { StoreService } from 'src/app/services/store.service';
 
-
 @Component({
   selector: 'app-filters',
   templateUrl: './filters.component.html'
@@ -31,5 +30,4 @@ export class FiltersComponent implements OnInit {
       this.categoriesSubscription.unsubscribe()
     }
   }
-
 }
