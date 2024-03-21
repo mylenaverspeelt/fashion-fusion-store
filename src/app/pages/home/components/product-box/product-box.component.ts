@@ -1,9 +1,11 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
 
 @Component({
   selector: 'app-product-box',
-  templateUrl: './product-box.component.html'
+  templateUrl: './product-box.component.html',
+  styleUrls: ['./product-box.component.css']
 })
 export class ProductBoxComponent implements OnInit {
 
@@ -11,9 +13,17 @@ export class ProductBoxComponent implements OnInit {
   @Input() product: Product | undefined;
   @Output() addToCart = new EventEmitter();
 
-  constructor() { }
+  isMobile: boolean = false;
+  truncateTitle: boolean = false;
+
+  constructor(private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
+    this.breakpointObserver.observe([Breakpoints.Handset])
+      .subscribe(result => {
+        this.isMobile = result.matches;
+        this.truncateTitle = result.matches;
+      });
   }
 
   onAddToCart(): void {

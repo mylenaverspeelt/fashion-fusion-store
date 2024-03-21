@@ -1,5 +1,5 @@
 <mat-card *ngIf="product">
-    <div [ngClass]="{flex: fullWidthMode}">
+    <div [ngClass]="{flex: fullWidthMode}" [ngClass]="isMobile ? 'mobile-style' : ''">
         <img [ngClass]="{'h-200px': !fullWidthMode, 'h-[360px]': fullWidthMode}" class="mb-1 mx-auto h-[200px]"
             [src]="product.image">
         <div class="w-full" [ngClass]="{'px-8 flex flex-col justify-between' : fullWidthMode}">
@@ -7,10 +7,10 @@
                 <h5 class="text-center">
                     {{product.category}}
                 </h5>
-                <p class="truncate hover:whitespace-normal">{{product.title}}</p>
-                <p *ngIf="fullWidthMode">{{product.description}}</p>
+                <p class="truncate hover:whitespace-normal" [ngClass]="isMobile ? 'mobile-cursor' : ''">{{product.title}}</p>
+                <p *ngIf="isMobile" class="truncate hover:whitespace-normal" [ngClass]="isMobile ? 'mobile-cursor' : ''"> {{product.description}}</p>
             </div>
-            <div class="flex justify-between">
+            <div class="flex justify-between" [ngClass]="isMobile ? 'mobile-infos' : ''">
                 <span class="text-green-500">{{product.price| currency:'BRL' }}</span>
                 <button (click)="onAddToCart()">
                     <mat-icon class="text-gray-500">shopping_cart</mat-icon>
