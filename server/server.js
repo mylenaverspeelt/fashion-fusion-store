@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded(({ extended: false })))
 app.use(bodyParser.json())
 app.use(cors({ origin: true, credentials: true }))
 
+//secret test api key
 const stripeApiKey = process.env.STRIPE_API_KEY;
 
 const stripe = require("stripe")(stripeApiKey)

@@ -66,6 +66,7 @@ export class CartComponent implements OnInit {
     this.http.post('http://localhost:4242/checkout', {
       items: this.cart.itemsArray
     }).subscribe(async (res: any) => {
+      //public test api key
       let stripe = await loadStripe('pk_test_51Os3OuRu7QNWcb2cn71u3YLwFKlIOBlQfVAJb0dcVWvK8Zj5MFm71A1f9rEJzJ8kUG3NG1U4rYERbWg8eFlKZhn600IgJybGmK');
       stripe?.redirectToCheckout({
         sessionId: res.id

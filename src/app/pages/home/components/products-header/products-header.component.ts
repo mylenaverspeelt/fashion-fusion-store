@@ -10,7 +10,7 @@ export class ProductsHeaderComponent implements OnInit {
   @Output() itemsCountChange = new EventEmitter<number>();
   @Output() sortChange = new EventEmitter<string>();
 
-  sort = 'Maior Preço'
+  sort = 'Menor Preço'
   itemsShowCount = 12
 
   constructor() { }
@@ -19,7 +19,13 @@ export class ProductsHeaderComponent implements OnInit {
   }
 
   onSortUpdated(newSort: string): void {
-    this.sort = newSort
+
+    if (newSort == 'desc') {
+      this.sort = 'Menor Preço'
+    } else {
+      this.sort = 'Maior Preço'
+    }
+
     this.sortChange.emit(newSort)
   }
 
