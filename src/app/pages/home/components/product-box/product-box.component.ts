@@ -14,7 +14,6 @@ export class ProductBoxComponent implements OnInit {
   @Output() addToCart = new EventEmitter();
 
   isMobile: boolean = false;
-  truncateTitle: boolean = false;
 
   constructor(private breakpointObserver: BreakpointObserver) { }
 
@@ -22,7 +21,6 @@ export class ProductBoxComponent implements OnInit {
     this.breakpointObserver.observe([Breakpoints.Handset])
       .subscribe(result => {
         this.isMobile = result.matches;
-        this.truncateTitle = result.matches;
       });
   }
 

@@ -4,8 +4,9 @@ import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html',
+  templateUrl: './header.component.html'
 })
+
 export class HeaderComponent implements OnInit {
   private _cart: Cart = { itemsArray: [] }
   itemsQuantity: number = 0
@@ -21,17 +22,18 @@ export class HeaderComponent implements OnInit {
     this.itemsQuantity = cart.itemsArray.map((item) => item.quantity).reduce((prev, current) => prev + current, 0)
   }
 
+
   constructor(private cartService: CartService) { }
 
-
   ngOnInit(): void {
+ 
   }
 
   getTotal(itemsArray: Array<CartItem>): number {
-   return this.cartService.getTotal(itemsArray)
+    return this.cartService.getTotal(itemsArray)
   }
 
-  onClearCart():void{
+  onClearCart(): void {
     this.cartService.clearCart()
   }
 }
