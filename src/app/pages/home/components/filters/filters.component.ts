@@ -5,7 +5,8 @@ import { StoreService } from 'src/app/services/store.service';
 
 @Component({
   selector: 'app-filters',
-  templateUrl: './filters.component.html'
+  templateUrl: './filters.component.html',
+  styleUrls: ['./filters.component.css']
 })
 export class FiltersComponent implements OnInit {
 

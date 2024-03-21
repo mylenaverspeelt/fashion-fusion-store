@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -24,6 +23,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { CartService } from './services/cart.service';
 import { StoreService } from './services/store.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -51,7 +51,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatBadgeModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule
   ],
   providers: [CartService, StoreService],
   bootstrap: [AppComponent]

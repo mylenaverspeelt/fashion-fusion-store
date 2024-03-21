@@ -1,3 +1,4 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Product } from 'src/app/models/product.model';
@@ -10,6 +11,7 @@ const ROWS_HEIGHT: { [id: number]: number } = { 1: 400, 3: 335, 4: 350 }
   selector: 'app-home',
   templateUrl: './home.component.html'
 })
+
 export class HomeComponent implements OnInit {
 
   cols = 3
@@ -20,10 +22,13 @@ export class HomeComponent implements OnInit {
   count = '12'
   productsSubscription: Subscription | undefined
 
-  constructor(private cartService: CartService, private storeService: StoreService) { }
+  constructor(private cartService: CartService, private storeService: StoreService, private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
     this.getProducts()
+    this.breakpointObserver.observe([Breakpoints.Handset]).subscribe(result => {
+      this.cols = result.matches ? 1 : 3;
+    });
   }
 
   getProducts(): void {
@@ -31,7 +36,7 @@ export class HomeComponent implements OnInit {
       this.products = _products;
     });
   }
-  
+
   onColumnsCountChange(colsNum: number): void {
     this.cols = colsNum
     this.rowHeight = ROWS_HEIGHT[this.cols]

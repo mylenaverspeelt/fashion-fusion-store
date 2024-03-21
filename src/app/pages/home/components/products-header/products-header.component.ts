@@ -1,3 +1,4 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -13,7 +14,14 @@ export class ProductsHeaderComponent implements OnInit {
   sort = 'Menor Preço'
   itemsShowCount = 12
 
-  constructor() { }
+
+  isMobile: boolean = false;
+
+  constructor(private breakpointObserver: BreakpointObserver) {
+    this.breakpointObserver.observe([Breakpoints.Handset]).subscribe(result => {
+      this.isMobile = result.matches;
+    });
+  }
 
   ngOnInit(): void {
   }

@@ -14,8 +14,8 @@
         </button>
     </mat-menu>
 
-    <mat-expansion-panel *ngIf="!isMobile && categories">
-        <mat-expansion-panel-header>
+    <mat-expansion-panel *ngIf="!isMobile && categories" class="custom-width">
+        <mat-expansion-panel-header class="custom-width">
             <mat-panel-title>CATEGORIAS</mat-panel-title>
         </mat-expansion-panel-header>
         <mat-selection-list [multiple]="false">
