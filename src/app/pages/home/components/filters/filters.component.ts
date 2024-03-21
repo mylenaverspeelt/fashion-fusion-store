@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Component, OnInit, Output, EventEmitter, HostListener } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { StoreService } from 'src/app/services/store.service';
 
@@ -13,7 +14,14 @@ export class FiltersComponent implements OnInit {
 
   categories: Array<string> | undefined
 
-  constructor(private storeService: StoreService) { }
+  menuExpanded: boolean = false;
+  isMobile: boolean = false
+
+  constructor(private storeService: StoreService, private breakpointObserver: BreakpointObserver) {
+    this.breakpointObserver.observe([Breakpoints.Handset]).subscribe(result => {
+      this.isMobile = result.matches;
+    })
+  }
 
   ngOnInit(): void {
     let categoriesSubscription = this.storeService.getAllCategories().subscribe((response) => {
@@ -30,4 +38,9 @@ export class FiltersComponent implements OnInit {
       this.categoriesSubscription.unsubscribe()
     }
   }
+
+  toggleMenu() {
+    this.menuExpanded = !this.menuExpanded;
+}
+
 }
