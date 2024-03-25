@@ -97,7 +97,7 @@
     </table>
 </mat-card>
 
-<mat-card *ngIf="!cart.itemsArray.length">
+<mat-card  class="max-w-7xl mx-auto" *ngIf="!cart.itemsArray.length">
     <p>Seu carrinho está vazio.</p>
     <button mat-raised-button routerLink="/home">Comprar agora</button>
 </mat-card>

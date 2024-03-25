@@ -97,3 +97,11 @@ button {
 button:hover {
   opacity: 0.8;
 }
+
+.back-to-home{
+color: black;
+}
+
+.back-to-home:hover{
+  color: blue;
+}
