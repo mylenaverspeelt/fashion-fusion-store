@@ -10,24 +10,25 @@ Uma loja de variedades fictícia feita com Angular, Typescript e Node :D
 - Ordenação por Preço: Os produtos podem ser organizados de forma ascendente ou descendente com base no preço
 - Personalização da Visualização: Os usuários podem escolher entre diferentes layouts de exibição para os produtos na tela
 - Responsividade para Telas Mobile: O website é responsivo, proporcionando uma experiência otimizada em dispositivos móveis
+- Consumo de API: Uso de API externa para fornecer os produtos disponíveis para compra, garantindo uma seleção atualizada e dinâmica
 - Carrinho de Compras: Os usuários podem adicionar, remover e visualizar itens em seu carrinho de compras antes de finalizar a compra
 - Checkout com Stripe*: Integração segura e eficiente com o Stripe para processar pagamentos de forma rápida e fácil
 
-* por ser um projeto somente para fins educacionais, não é possível finalizar a compra, foi utilizado o stripe no modo teste/desenvolvimento.
+por ser um projeto somente para fins educacionais, não é possível finalizar a compra, foi utilizado o stripe no modo teste/desenvolvimento.
 
 ### Bibliotecas utilizadas
 
 - [angular](https://angular.io/)
+- [typescript](https://www.typescriptlang.org/)
+- [node.js](https://nodejs.org/en)
 - [angular material](https://material.angular.io/)
 - [nodemon](https://www.npmjs.com/package/nodemon)
-- [node.js](https://nodejs.org/en)
 - [stripe](https://stripe.com/br)
 - [fake store API](https://fakestoreapi.com/)
-- [typescript](https://www.typescriptlang.org/)
- 
-# Como Instalar e Executar o Projeto na Sua Máquina
 
-## Passo 1 - Requisitos
+## Como Instalar e Executar o Projeto na Sua Máquina
+
+### Passo 1 - Requisitos
 
 Você vai precisar de:
 
@@ -36,13 +37,13 @@ Você vai precisar de:
 - [angular-cli](https://angular.io/cli)
 - [npm packages](https://www.npmjs.com/)
 
-## Passo 2 - Clone o repositório
+### Passo 2 - Clone o repositório
 
 ```sh
 $ git clone https://github.com/mylenaverspeelt/mix-store.git
 ```
 
-## Passo 3 - Rode a aplicação
+### Passo 3 - Rode a aplicação
 
 - Certifique de estar na pasta raiz do projeto
 
@@ -63,7 +64,7 @@ ng serve
 
 O projeto estará disponível em localhost:4200
 
-#### Simultaneamente, abra outro terminal
+##### Simultaneamente, abra outro terminal
 - Navegue até a pasta do servidor
 
 ```sh
