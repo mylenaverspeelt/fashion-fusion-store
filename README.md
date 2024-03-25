@@ -12,9 +12,9 @@ Uma loja de variedades fictícia feita com Angular, Typescript e Node :D
 - Responsividade para Telas Mobile: O website é responsivo, proporcionando uma experiência otimizada em dispositivos móveis
 - Consumo de API: Uso de API externa para fornecer os produtos disponíveis para compra, garantindo uma seleção atualizada e dinâmica
 - Carrinho de Compras: Os usuários podem adicionar, remover e visualizar itens em seu carrinho de compras antes de finalizar a compra
-- Checkout com Stripe*: Integração segura e eficiente com o Stripe para processar pagamentos de forma rápida e fácil
+- Checkout com Stripe**: Integração segura e eficiente com o Stripe para processar pagamentos de forma rápida e fácil
 
-por ser um projeto somente para fins educacionais, não é possível finalizar a compra, foi utilizado o stripe no modo teste/desenvolvimento.
+** por ser um projeto somente para fins educacionais, não é possível finalizar a compra, foi utilizado o stripe no modo teste/desenvolvimento.
 
 ### Bibliotecas utilizadas
 
