@@ -17,15 +17,28 @@
           overflow: hidden;
           text-overflow: ellipsis;
       }
+
   }
+
 
   .mobile-hide {
       display: none;
   }
 
   .mobile-quantity {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 25px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 25px 0;
+  }
+
+  .mobile-overflow {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis
+  }
+
+  .mobile-button{
+    width: 20px;
+    height: 20px;
   }
