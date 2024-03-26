@@ -2,6 +2,14 @@
 
 Uma loja de variedades fictícia feita com Angular, Typescript e Node :D
 
+
+## Visite o Site
+
+O site está atualmente hospedado na Vercel e pode ser acessado através do seguinte link:
+
+[mix-store](https://mix-store-eta.vercel.app/home)
+
+
 <img src="./src/app/public/images/mix-store-print.jpg">
 
 ### Funcionalidades
@@ -20,6 +28,7 @@ Uma loja de variedades fictícia feita com Angular, Typescript e Node :D
 - Responsividade mínima para Telas Mobile: O website é minimamente responsivo, proporcionando uma experiência agradavel em dispositivos móveis
 - Utilização do Nodemon: Permite a visualização das alterações em tempo real no código durante o desenvolvimento.
 - Revisão de Código: Boas praticas, remoção de conteudo não utilizado e adição de comentários pertinentes.
+- Hospedagem online na Vercel
 
 ### Bibliotecas utilizadas
 
