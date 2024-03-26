@@ -15,7 +15,7 @@ Uma loja de variedades fictícia feita com Angular, Typescript e Node :D
 
 ** por ser um projeto somente para fins educacionais, não é possível finalizar a compra, foi utilizado o stripe no modo teste/desenvolvimento.
 
-### Melhorias
+### Melhorias além do proposto no tutorial
 
 - Responsividade mínima para Telas Mobile: O website é minimamente responsivo, proporcionando uma experiência agradavel em dispositivos móveis
 - Utilização do Nodemon: Permite a visualização das alterações em tempo real no código durante o desenvolvimento.
