@@ -3,10 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { loadStripe } from '@stripe/stripe-js';
 import { Cart, CartItem } from 'src/app/models/cart.model';
 import { CartService } from 'src/app/services/cart.service';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-cart',
-  templateUrl: './cart.component.html'
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
 
@@ -31,15 +33,25 @@ export class CartComponent implements OnInit {
     'name', 'price', 'quantity', 'total', 'action']
 
   dataSource: Array<CartItem> = []
+  isMobile: boolean = false;
 
-  constructor(private _cartService: CartService, private http: HttpClient) { }
+  constructor(private _cartService: CartService, private http: HttpClient, private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
+
+    this.breakpointObserver.observe([Breakpoints.Handset])
+      .subscribe(result => {
+        this.isMobile = result.matches;
+      });
+
     this.dataSource = this.cart.itemsArray
     this._cartService.cart.subscribe((_cart: Cart) => {
       this.cart = _cart
       this.dataSource = this.cart.itemsArray
     })
+
+
+
   }
 
   getTotal(items: Array<CartItem>): number {
