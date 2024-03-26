@@ -7,7 +7,7 @@ Uma loja de variedades fictícia feita com Angular, Typescript e Node :D
 
 O site está atualmente hospedado na Vercel e pode ser acessado através do seguinte link:
 
-[mix-store](https://mix-store-eta.vercel.app/home)
+* https://mix-store-eta.vercel.app/home
 
 
 <img src="./src/app/public/images/mix-store-print.jpg">
